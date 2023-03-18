@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/1f100d425d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script src="../javascript/script.js" defer></script>
+    <title>ML Strength - Contact</title>
+</head>
+<body>
+    <nav id="nav"></nav>
+    <section id="locations" class="blue-bg">
+        <h2>Locations</h2>
+        <ul>
+            <li>
+                <figure><img src="/images/gym-ashgrove.jpg" alt="Photo of Ashgrove gym"></figure>
+                <div>
+                    <h3>Ashgrove</h3>
+                    <address>
+                        <p>112 Ashgrove Road<br>Ashgrove 4060</p>
+                        <p>Ph: <a href="tel:+61732431311">07 3243 1311</a></p>
+                    </address>
+                </div>
+            </li>
+            <li>
+                <figure><img src="/images/gym-brisbane.jpg" alt="Photo of Brisbane gym"></figure>
+                <div>
+                    <h3>Brisbane</h3>
+                    <address>
+                        <p>Level 3, Fitness Building<br>21-31 Ann Street<br>Brisbane 4000</p>
+                        <p>Ph: <a href="tel:+61733946817">07 3394 6817</a></p>
+                    </address>
+                </div>
+            </li>
+            <li>
+                <figure><img src="/images/gym-chermside.jpg" alt="Photo of Chermside gym"></figure>
+                <div>
+                    <h3>Chermside</h3>
+                    <address>
+                        <p>19 Burn Street<br>Chermside 4032</p>
+                        <p>Ph: <a href="tel:+61733261957">07 3326 1957</a></p>
+                    </address>
+                </div>
+            </li>
+            <li>
+                <figure><img src="/images/gym-graceville.jpg" alt="Photo of Graceville gym"></figure>
+                <div>
+                    <h3>Graceville</h3>
+                    <address>
+                        <p>1 Workout Lane<br>Graceville 4075</p>
+                        <p>Ph: <a href="tel:+61735748735">07 3574 8735</a></p>
+                    </address>
+                </div>
+            </li>
+            <li>
+                <figure><img src="/images/gym-westlake.jpg" alt="Photo of Westlake gym"></figure>
+                <div>
+                    <h3>Westlake</h3>
+                    <address>
+                        <p>100 Getjacked Avenue<br>Westlake 4060</p>
+                        <p>Ph: <a href="tel:+61732567468">07 3256 7468</a></p>
+                    </address>
+                </div>
+            </li>
+        </ul>
+        
+    </section>
+    <section class="blue-bg">
+        <h2>Contact Us</h2>
+        <div class="content"></div>
+        <form method="post" action="non-existent.php">
+            <ul>
+                <li >
+                <label for="name">
+                Name:
+                </label>
+                <input type="text" name="name" id="name" maxlength="64" placeholder="Enter your name" title="Enter your name" required>
+                </li>
+                <li>
+                    <label for="email">
+                    Email:
+                    </label>
+                    <input type="email" name="email" placeholder="email@address.com" id="email" title="Enter your email" required>
+                </li>
+                <li>
+                    <label for="message">
+                    Message:
+                    </label>
+                    <textarea name="message" id="message" cols="22" rows="10" maxlength="500" placeholder="Enter your message" title="Enter your message" required></textarea>
+                </li>
+                <li>
+                    <label style="height: 0"></label>
+                    <button type="submit" class="button">Submit</button>
+                </li>
+            </ul>
+        </form>
+    </section>
+    <footer id="footer"></footer>
+</body>
+</html>

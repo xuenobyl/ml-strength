@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/1f100d425d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script src="../javascript/script.js" defer></script>
+    <title>ML Strength - Join</title>
+</head>
+<body>
+    <nav id="nav"></nav>
+    
+    <section id="sign-up" class="blue-bg">
+        <div class="white-bg">
+            <h2>Sign up</h2>
+            <p>
+                Whether your goal is weight loss, body building, nutrition or diet improvements, having more energy, or just looking and feeling better - we're here for you!</p>
+            <span id="popup">Help</span>
+            
+            <video id="popup-video" class="hidden" autoplay loop muted>
+                <source src="../videos/help.mp4" type="video/mp4">
+                This video is shoehorned in here to meet a baffling requirement and your browser can't display it
+            </video>
+            
+            <form action="non-existant.php" method="post">
+                <fieldset class="sign-up-inputs">
+
+                    <label for="first-name">First name</label>
+                    <input type="text" id="first-name" name="first-name" maxlength="64" placeholder="Enter first name" title="Enter your first name" required>
+                    <div class="feedback">
+                        <span class="required-marker"></span>
+                        <span class="error">First name must not be empty</span>
+                    </div>
+                    
+
+                    <label for="last-name">Last name</label>
+                    <input type="text" id="last-name" name="last-name" maxlength="64" placeholder="Enter surname" title="Enter your surname" required>
+                    <div class="feedback">
+                        <span class="required-marker"></span>
+                        <span class="error">Last name must not be empty</span>
+                    </div>
+            
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="16" max="120" placeholder="Enter age" title="Enter your age" required>
+                    <div class="feedback">
+                        <span class="required-marker"></span>
+                        <span class="error">Age must be between 16-120</span>
+                    </div>
+                
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"  placeholder="email@address.com" title="Enter your email" required>
+                    <div class="feedback">
+                        <span class="required-marker"></span>
+                        <span class="error">Please enter a valid email address</span>
+                    </div>
+                
+                    <label for="mobile" >Mobile</label>
+                    <input type="tel" id="mobile" name="mobile" pattern="[0-9]+" maxlength="11" placeholder="Enter mobile number" title="Enter your mobile number (0000000000)" required>
+                    <div class="feedback">
+                        <span class="required-marker"></span>
+                        <span class="error">Please enter a valid mobile</span>
+                    </div>
+                
+                    <label for="phone" >Home Phone</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]+" maxlength="10" placeholder="Enter home phone" title="Enter your home phone number (0000000000)">
+                    <div class="feedback">
+                        <span class="error">Please enter a valid phone number</span>
+                    </div>
+                            
+                            
+                            <!-- <li>
+                                <label for="closest-gym">Closest gym</label>
+                                <select id="closest-gym" name="closest-gym">
+                                    <option value="" selected disabled hidden>Please choose one</option>
+                                    <option value="Ashgrove" required>Ashgrove</option>
+                                    <option value="Brisbane">Brisbane</option>
+                                    <option value="Chermside">Chermside</option>
+                                    <option value="Graceville">Graceville</option>
+                                    <option value="Westlake">Westlake</option>
+                                </select>
+                            </li> -->
+                        
+                            
+                    <!-- <fieldset>
+                        <legend>Why are you joining us today?</legend>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="goals" id="health" required>
+                                <label for="health">Improve health and fitness</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="goals" id="weight">
+                                <label for="weight">Weight management</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="goals" id="balance-flexibility">
+                                <label for="balance-flexibility">Improve balance and flexibility</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="goals" id="strength">
+                                <label for="strength">Build strength and muscle</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="goals" id="mental-health">
+                                <label for="mental-health">Improve mental health</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="goals" id="friends">
+                                <label for="friends">Make friends and meet like-minded people</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="goals" id="pain">
+                                <label for="pain">Pain management</label>
+                            </li>
+                            <li>
+                                <label for="other">Other</label>
+                                <input type="text" name="goals" id="other" maxlength="64">
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>How did you hear about us?</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" name="how-hear" id="friend" value="friend" required>
+                                <label for="friend">Friends or family</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="how-hear" id="social-media" value="social-media">
+                                <label for="social-media">Social media</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="how-hear" id="google" value="google">
+                                <label for="google">Google search</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="how-hear" id="in-person" value="in-person">
+                                <label for="in-person">Saw a gym in person</label>
+                            </li>
+                            <li>
+                                <label for="other">Other </label>
+                                <input type="text" name="how-hear" id="other" maxlength="64">
+                            </li>
+                        </ul>
+                    -->
+                </fieldset>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" >I agree to the <a href="#">terms and conditions</a></label>
+                <div class="feedback">
+                <span class="error">Please read and agree to the terms and conditions</span>
+                </div>
+                <button type="submit" class="button">Sign me up!</button>
+            </form>
+        </div>
+    </section>
+    <footer id="footer"></footer>  
+</body>
+</html>
