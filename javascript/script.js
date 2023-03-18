@@ -1,32 +1,9 @@
 $(document).ready(function(){
-    $("#nav").load("/html/nav.html");
-    $("#footer").load("/html/footer.html");
+    $("#nav").load("../html/nav.html");
+    $("#footer").load("../html/footer.html");
 });
 
-// classes carousel    
 
-// const slides = document.querySelectorAll(".slider li");
-// slides.forEach((slide, index) => {
-//     slide.style.transform = `translateX(${index * 100}%)`;
-// })
-
-// let currentSlide = 0;
-// const nextSlide = document.querySelector(".btn-next");
-// const prevSlide = document.querySelector(".btn-prev");
-// nextSlide.addEventListener("click", () => moveSlide(1));
-// prevSlide.addEventListener("click", () => moveSlide(-1));
-
-// function moveSlide(direction) {
-//     currentSlide += direction;
-//     if (currentSlide < 0) {
-//         currentSlide = slides.length - 1;
-//     } else if (currentSlide === slides.length) {
-//         currentSlide = 0;
-//     }
-//     slides.forEach((slide, index) => {
-//         slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
-//     })
-// }
 
 //accordion
 
