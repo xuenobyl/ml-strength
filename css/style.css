@@ -374,7 +374,7 @@ header p {
     width: 100%;
     border-style: none;
 }
-input[type=tel] {
+input[type=number] {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -650,7 +650,6 @@ nav .button {
 
     /* index */
     #staffed-24-7 {
-
         padding: 0;
         display: -webkit-box;
         display: -ms-flexbox;
