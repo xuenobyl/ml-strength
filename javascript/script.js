@@ -1,6 +1,17 @@
+if (window.location.href.includes("index.html")) {
+    $(document).ready(function(){
+        $("#nav").load("html/nav.html");
+        $("#footer").load("html/footer.html");
+    });
+} else {
+    $(document).ready(function(){
+        $("#nav").load("../html/nav.html");
+        $("#footer").load("../html/footer.html");
+    });
+}
 
-    $("#nav").load("../html/nav.html");
-    $("#footer").load("../html/footer.html");
+
+
 
 
 
