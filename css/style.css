@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
     font: 600 16px/1.5 "Manrope", sans-serif;
     font-size: min(16px, 5vw);
@@ -6,7 +13,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     scroll-behavior: smooth;
     font: inherit;
 }
@@ -51,11 +59,19 @@ a {
 .button,
 .button-secondary {
     margin-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     height: 3.5rem;
     border-style: none;
     font: 700 1rem/1 "Manrope", sans-serif;
@@ -65,7 +81,6 @@ a {
     text-shadow: none;
     cursor: pointer;
 }
-
 .button-secondary {
     color: var(--orange);
     background: none;
@@ -73,7 +88,6 @@ a {
     font: 700 1rem/1 "Manrope", sans-serif;
     text-shadow: 0 0 10px black;
 }
-
 header,
 footer,
 section,
@@ -81,9 +95,12 @@ nav {
     padding: 20px;
 }
 section {
-    padding-top: 80px;
+    padding-top: 3rem;
     padding-bottom: 5rem;
     min-height: 100vh;
+}
+section:first-of-type {
+    padding-top: 8rem;
 }
 .orange-bg {
     background-color: var(--orange);
@@ -148,6 +165,8 @@ header p {
     font: 400 min(14vw, 5rem)/1 "Anton", sans-serif;
 }
 #hero-content {
+    width: -webkit-min-content;
+    width: -moz-min-content;
     width: min-content;
     margin: 0 auto;
 }
@@ -165,6 +184,7 @@ header p {
     color: rgb(123, 158, 255);
 }
 
+
 /* about */
 
 #our-story {
@@ -177,15 +197,26 @@ header p {
     color: rgb(255, 255, 255);
 }
 #our-people ul {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto;
     grid-template-columns: auto;
     gap: 3rem;
     margin-top: 3rem;
 }
 #our-people li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     background-color: white;
     color: var(--blue2);
@@ -193,12 +224,6 @@ header p {
 #our-people li figcaption {
     padding: 1rem;
 }
-
-
-
-
-
-
 
 
 
@@ -216,10 +241,13 @@ header p {
 .slider {
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    scroll-snap-type: x mandatory;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
@@ -229,17 +257,23 @@ header p {
 .slider li {
     margin: 0 20px;
     scroll-snap-align: center;
-    align-items: center;
-    flex-shrink: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     height: 100%;
     width: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
 }
 .slider li img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .slider li h3 {
     position: absolute;
@@ -282,7 +316,6 @@ header p {
     content: "\2b";
     margin-left: 1rem;
 }
-
 .accordion + div {
     margin-top: 1rem;
     width: 100%;
@@ -297,22 +330,27 @@ header p {
 /* contact */
 
 #locations ul {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 3rem;
     margin-top: 3rem;
 }
-
 #locations li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 #locations li div {
     background-color: white;
     color: var(--blue2);
     padding: 20px;
 }
-
 
 
 
@@ -324,25 +362,29 @@ header p {
         max-width: 500px;
         margin: 0 auto;
 }
-
 #sign-up form{
     margin-top: 3rem;
 }
 .sign-up-inputs {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     margin-bottom: 1rem;
     width: 100%;
     border-style: none;
 }
-
+input[type=tel] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
 fieldset label {
     display: none;
     text-align: end;
     padding-right: 5px;
     margin-top: 0.5rem;
 }
-
 input,
 textarea {
     border: 1px solid var(--blue);
@@ -361,10 +403,30 @@ input[type="checkbox"] {
     padding-left: 0.5rem;
 }
 /* form error */
+input:invalid:not(:focus):not(:-moz-placeholder-shown) + .feedback .error {
+    display: block;
+    visibility: visible;
+    color: #B30000;
+}
+input:invalid:not(:focus):not(:-ms-input-placeholder) + .feedback .error {
+    display: block;
+    visibility: visible;
+    color: #B30000;
+}
 input:invalid:not(:focus):not(:placeholder-shown) + .feedback .error {
     display: block;
     visibility: visible;
     color: #B30000;
+}
+input:invalid:not(:focus):not(:-moz-placeholder-shown) {
+    border: 1px solid black;
+    outline: 1px solid #B30000;
+    background-color: #ffe9ef;
+}
+input:invalid:not(:focus):not(:-ms-input-placeholder) {
+    border: 1px solid black;
+    outline: 1px solid #B30000;
+    background-color: #ffe9ef;
 }
 input:invalid:not(:focus):not(:placeholder-shown),
 select[value=""] {
@@ -376,7 +438,6 @@ input:optional,
 input:optional + .feedback {
     display: none;
 }
-
 input:required + .feedback .required-marker::after {
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900; 
@@ -401,7 +462,6 @@ form a {
 
 
 
-
 /* navigation */
 
 nav {
@@ -410,9 +470,16 @@ nav {
     left: 0;
     width: 100%;
     z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     color: white;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 70%)), to(rgba(100, 100, 100, 0)));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 70%), rgba(100, 100, 100, 0));
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 70%), rgba(100, 100, 100, 0));
 } 
 nav a {
@@ -422,9 +489,13 @@ nav a {
     padding-bottom: 0.5rem;
 }
 #topbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 #burger {
     font-size: 1.5rem;
@@ -433,8 +504,6 @@ nav a {
 #logo {
     display: block;
     width: 8rem;
-    /* padding-top: 0.5rem;
-    padding-bottom: 0.5rem; */
     margin-right: auto;
 }
 #menu {
@@ -455,21 +524,25 @@ nav .button {
     padding: 0.5rem 1rem;
     margin: 0;
     margin-left: 1rem;
-    flex: unset;
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
 }
 .hidden {
     display: none;
 }
 .visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
-
-
-
-
-
 
 
 
@@ -478,10 +551,19 @@ nav .button {
     
     /* general */
     nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 1rem;
     }
     #menu {
@@ -489,8 +571,13 @@ nav .button {
         position: unset;
         width: auto;
         padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         gap: 1rem;
     }
     #burger {
@@ -511,12 +598,16 @@ nav .button {
         margin-top: 150px;
     }
     #our-people ul {
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
 
     /* classes */
     .slider li {
         width: 50%;
+    }
+    .accordion {
+        width: 100%;
     }
 
     /* join */
@@ -527,22 +618,29 @@ nav .button {
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
     #locations li {
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     #locations li div {
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
     }
     #locations li figure {
-        flex: 1.5;
+        -webkit-box-flex: 1.5;
+            -ms-flex: 1.5;
+                flex: 1.5;
         max-width: 30rem;
     }
-    .accordion {
-        width: 100%;
-    }
+
     
 }
-@media (min-width: 1000px) { /*TODO: combine this with above media*/
+@media (min-width: 1000px) { 
     
     /* general */
     section, footer {
@@ -554,14 +652,20 @@ nav .button {
     #staffed-24-7 {
 
         padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
-    
     #staffed-24-7 img {
         display: block;
-        filter: grayscale(100);
+        -webkit-filter: grayscale(100);
+                filter: grayscale(100);
         mix-blend-mode: multiply;
         width: 30rem;
     }
@@ -569,6 +673,7 @@ nav .button {
     
 
     #our-people ul {
+        -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;    
     }
 
@@ -588,6 +693,7 @@ nav .button {
         display: inline-block;
     }
     .sign-up-inputs {
+        -ms-grid-columns: auto 1fr 1fr;
         grid-template-columns: auto 1fr 1fr;
     }
     input:optional,
@@ -600,12 +706,13 @@ nav .button {
     }
     .error {
         display: block;
+        max-width: -webkit-max-content;
+        max-width: -moz-max-content;
         max-width: max-content;
     }
     .feedback {
         margin-top: 0.5rem;
     }
-
     #popup {
         display: inline;
         cursor: pointer;
@@ -624,14 +731,19 @@ nav .button {
         position: absolute;
         
         z-index: 100;
-        animation-name: popupfadein;
-        animation-duration:  0.5s;
+        -webkit-animation-name: popupfadein;
+                animation-name: popupfadein;
+        -webkit-animation-duration:  0.5s;
+                animation-duration:  0.5s;
+    }
+    @-webkit-keyframes popupfadein {
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
     @keyframes popupfadein {
         from { opacity: 0; }
         to { opacity: 1; }
     }
 }
-
 
 

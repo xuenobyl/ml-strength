@@ -1,3 +1,6 @@
+
+// nav
+
 if (window.location.href.includes("index.html")) {
     $(document).ready(function(){
         $("#nav").load("html/nav-index.html");
@@ -11,7 +14,6 @@ if (window.location.href.includes("index.html")) {
 }
 
 
-
 //accordion
 
 const accordionButtons = document.querySelectorAll(".accordion");
@@ -21,6 +23,7 @@ accordionButtons.forEach((btn, index) => {
         accordionContent[index].classList.toggle("hidden");
     });
 })
+
 
 //slider prev/next buttons
 
@@ -33,7 +36,6 @@ if (slider !== null) {
 function moveSlide(direction) {
     slider.scrollBy(direction, 0);
 }
-
 
 
 //popup
