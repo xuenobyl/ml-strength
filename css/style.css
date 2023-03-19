@@ -374,10 +374,9 @@ header p {
     width: 100%;
     border-style: none;
 }
-input[type=number] {
+input[type="number"] {
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+       -moz-appearance: textfield;
 }
 fieldset label {
     display: none;
